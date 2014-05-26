@@ -1,5 +1,0 @@
-0    INFO  2014-05-25 22:28:06,586 [main]            com.iman.nrms.nrmgs.Gather     - g=g1:true
-5    DEBUG 2014-05-25 22:28:06,591 [main]            com.iman.nrms.nrmgs.Gather     - g=g3:true
-6    ERROR 2014-05-25 22:28:06,592 [main]            com.iman.nrms.nrmgs.Gather     - g1=g3:true
-5    ERROR 2014-05-25 22:32:41,422 [main]            com.iman.nrms.nrmgs.Gather     - g1=g3:284720968
-4    ERROR 2014-05-25 22:33:38,476 [main]            com.iman.nrms.nrmgs.Gather     - g1=g3:495053715
