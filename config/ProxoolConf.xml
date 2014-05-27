@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<something-else-entirely>
+	<proxool>
+		<alias>nrmgsPool</alias> 
+		<driver-url>
+		jdbc:mysql://localhost:3306/gatherdb
+		</driver-url>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="eiddoel" />
+			<property name="password" value="hechang23" />
+		</driver-properties>
+		<maximum-new-connections>20</maximum-new-connections>
+		<prototype-count>5</prototype-count>
+		<maximum-active-time>7200000</maximum-active-time>
+		<maximum-connection-count>30</maximum-connection-count>
+		<minimum-connection-count>1</minimum-connection-count>
+		<test-before-use>true</test-before-use>
+		<house-keeping-test-sql>select 1 from test t where 0=1</house-keeping-test-sql>
+	</proxool>
+</something-else-entirely>

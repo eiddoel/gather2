@@ -8,6 +8,8 @@ import java.io.InputStreamReader;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
+import org.logicalcobwebs.proxool.ProxoolException;
+import org.logicalcobwebs.proxool.configuration.JAXPConfigurator;
 
 public class GatherContainer {
 	static Logger logger = Logger.getLogger(GatherContainer.class);
@@ -23,22 +25,30 @@ public class GatherContainer {
 	}
 	
 	public void run(){
-/*		try {
-			
-			InputStreamReader is = new InputStreamReader(new FileInputStream("gather.cfg.properties"));
+		/*try {
+			File f = new File("");
+			InputStreamReader is = new InputStreamReader(new FileInputStream(f.getAbsolutePath()+File.separator+"config\\gather.cfg.properties"));
 			Properties porperties=new Properties();
 			porperties.load(is);
 			String isTest = porperties.getProperty("isTest");
 			logger.debug(isTest);
+			
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}catch(IOException e1){
 			e1.printStackTrace();
 		}*/
-		File f = new File("");
-		logger.debug(""+f.getAbsolutePath());
-		logger.debug(""+System.getProperty("user.dir"));
+		initResourcePoolMap();
+		
+
+	}
+	private void initResourcePoolMap(){
+		try {
+			JAXPConfigurator.configure("config/ProxoolConf.xml", false);
+		} catch (ProxoolException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
